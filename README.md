@@ -1,83 +1,36 @@
-## Readme template da Alura
+# Ceep
 
-Template para personalizar readme dos projetos da [Alura](https://www.alura.com.br/). O objetivo deste template é auxiliar as pessoas que pretendem criar readmes mais informativos e descritivos. Considere esse modelo como base, mas se preferir, ajuste os detalhes conforme sua necessidade e caso queira, [confira esse artigo que ensina a personalizar readmes em geral](https://www.alura.com.br/artigos/escrever-bom-readme).
-
-## Exemplos de readmes
-
-<details>
-  <summary><b>Mobile</b></summary>
-    
-- [Android](https://github.com/alura-cursos/android-com-kotlin-personalizando-ui/blob/master/README.md)
-- [React Native](https://github.com/alura-cursos/react-native-comecando-do-zero/blob/main/README.md)
-- [Flutter](https://github.com/alura-cursos/flutter-nuvigator/blob/start/README.md)
-</details>
-
-<details>
-  <summary><b>Front-end</b></summary>
-    
-- [JavaScript](https://github.com/vanessametonini/aluramidi-curso/blob/master/README.md) 
-</details>
-
-<details>
-  <summary><b>Programação</b></summary>
-  
-- [Kotlin](https://github.com/alura-cursos/kotlin-introducao-orientacao-a-objetos/blob/main/README.md)
-- [Java](https://github.com/gui-lirasilva/Edige-POO/blob/master/README.md)
-  
-</details>
-
-Ao criar o seu readme, remova todas as informações acima e mantenha apenas a imagem de capa e o conteúdo restante a partir do título **"Nome do projeto"**.
-
-## Imagem de capa
-
-Adicione a imagem de capa com o tema do seu projeto:
-
-![Thumbnail GitHub](https://user-images.githubusercontent.com/8989346/123303345-171fc980-d4f4-11eb-84ae-cb0e49bfb126.png)
-
-> Você pode pegar a imagem a partir [deste template](https://docs.google.com/presentation/d/1im_-_spDdNEEsfrmjeZet2ZzVKjG-sQSBWfPFJhZ4q0/edit#slide=id.gb6f422ab58_0_111).
-
-> Ou gerar neste [site](https://alurathumbnail.vercel.app/).
-
-Após adicionar a imagem, também modifique as configurações do projeto para garantir que a imagem vai ser carregada como thumbnail:
-
-**Settings** > **Options** > **Social preview** > **Edit** > **Upload an image...**
-
-<details>
-  <summary><b>Demonstração da adição de thumbnail<b/></summary>
-    
-![adicionando-imagem-preview](https://user-images.githubusercontent.com/8989346/123303159-e0e24a00-d4f3-11eb-9900-92a8b15bc31b.gif)
-    
-</details>
-  
-# Nome do projeto
-
-Descreva o que é o projeto e o que ele faz
+REST API em Ktor que implementa um CRUD de notas com título e mensagem.
 
 ## 🔨 Funcionalidades do projeto
 
-Indique quais são as funcionalidades e comportamentos do App
+A aplicação permite:
 
-Se possível, apresente um exemplo visual do projeto, seja gif, imagens ou vídeo, abaixo segue um exemplo:
+- listar todas as notas
+- busca nota por id
+- criar uma nota
+- alterar ou salva uma nota de id específico
+- remover nota a partir do id
 
-![](https://github.com/alura-cursos/android-com-kotlin-personalizando-ui/raw/master/img/amostra.gif)
+<img width="1018" alt="Console exibindo log de inicialização do Ktor" src="https://user-images.githubusercontent.com/8989346/233460234-8e75987d-0768-43fe-ab35-cecc627f8be5.png">
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
-**Faça uma lista de tecnologias e técnicas utilizadas (a justificativa e descrição são opcionais)**:
+Para implementar a aplicação foi utilizado
 
-- `Funcionalidade 1`: descrição da funcionalidade 1
-- `Funcionalidade 2`: descrição da funcionalidade 2
-  - `Funcionalidade 2a`: descrição da funcionalidade 2a relacionada à funcionalidade 2
-- `Funcionalidade 3`: descrição da funcionalidade 3
+- `ktor server` 
+- `ktor serialization`
+- `ktor content negotiation`
+- `kotlin serialization`
+- `exposed`
+- `h2 database`
+- `Netty engine`
+- `logback`
 
 ## 📁 Acesso ao projeto
 
-**Indique como é possível baixar ou acessar o código fonte do projeto, seja projeto inicial ou final**
+Você pode acessar o [código fonte](https://github.com/alura-cursos/ktor-rest-api/tree/dev) da aplicação ou [baixar o zip](https://github.com/alura-cursos/ktor-rest-api/archive/refs/heads/dev.zip).
 
 ## 🛠️ Abrir e rodar o projeto
 
-**Apresente as instruções necessárias para abrir e executar o projeto**
-
-## 📚 Mais informações do curso
-
-**Faça um CTA (_call to action_) para o curso do projeto**
+Para abrir o projeto, você pode considerar o uso do IntelliJ IDEA Comunnity ou Ultimate, basta apenas usar a opção **Open**, abrir o projeto e aguardar as tasks do Gradle em conjunto com indexação da IDE, então, é só acessar o arquivo `src\main\kotlin\br\com\alura\Application.kt` e rodá-lo.
