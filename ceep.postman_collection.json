@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "dcea8960-2e3f-42bf-848b-6bc25c5e8443",
+		"name": "ceep",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "643343"
+	},
+	"item": [
+		{
+			"name": "all notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a note",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"first note\",\r\n    \"message\" : \"first message of the first note created\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find a note",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notes/dba5834f-de4b-4b54-91e5-cc1a2b162188",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes",
+						"dba5834f-de4b-4b54-91e5-cc1a2b162188"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a note",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"updating the note with a new title\",\r\n    \"message\" : \"upadting the message of a note that already exists\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notes/dba5834f-de4b-4b54-91e5-cc1a2b162188",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes",
+						"dba5834f-de4b-4b54-91e5-cc1a2b162188"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notes/dba5834f-de4b-4b54-91e5-cc1a2b162188",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes",
+						"dba5834f-de4b-4b54-91e5-cc1a2b162188"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
